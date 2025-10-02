@@ -1,0 +1,560 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+                * { padding: 0;
+            margin: 0;
+            background: black;
+            color: white;
+    }
+    ul {
+        list-style: none;
+        background: black;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+
+    }
+    ul li a{
+        display: block;
+        padding: 20px 25px;
+        color:rgb(255, 166, 0);
+        text-decoration: none;
+        padding: 10px 95px;
+        text-align: center;
+        font-size: 20px;
+    }
+   
+    ul li ul.dropdown li{
+        display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;   
+        background:  rgb(0, 0, 0);
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: rgba(59, 60, 61, 0.747);
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }   
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+   /* ALL BOXES */
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    
+    .box{ 
+        float:left;
+        margin: 12px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+    }
+    
+    #box1 { background: url('bh.jpg');
+background-size: contain;}
+#box2 { background: url('ph.jpg');
+background-size: contain;}
+#box3 { background: url('ih.jpg'), no-repeat;
+background-size: contain;}
+#box4 { 
+    background: url('ih.jpg') no-repeat;
+background-size: contain;
+}
+ 
+/* BOX HID*/
+    .hid{ 
+        top: 100%;
+        position: relative;
+        transition: all .3s ease-out;
+        height: 100%;
+        width: 100%;
+        background: rgba(128, 128, 128, 0.637);
+        padding: 7px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .box:hover > .hid{
+        top: 0;
+    }
+     h1,p{
+        margin: 0;
+        background: none;
+        color: white;
+        
+     }
+
+
+
+     .p-box {
+            width: 300px; 
+            background-color: #f0f0f0; /* Grey background color */
+            padding: 20px; 
+            text-align: center; 
+            border: 1px solid #ccc; 
+        }
+
+        
+        .p-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+      
+        .p-name {
+            font-weight: bold;
+            margin-top: 10px; 
+        }
+
+       
+        .p-price {
+            color: #007bff; /* Blue color for the price */
+        }
+    /* ICONS*/
+ i{
+    background: none;
+transform: scale(1.1);
+width: 0;
+height: 45px;
+float: right;
+position: relative;
+
+margin-left: 1px;
+cursor: pointer;
+}
+#ih{
+    top: 6px;
+right: 100px;
+}
+#is{
+    top: 6px;
+right: 50px;
+}
+/* TITLE */
+ .main h1{
+        position: relative;
+        color: rgb(49, 48, 48);
+    }
+     .main h1::before{
+        content: attr(data-text);
+        position: absolute;
+        color: white;
+        text-shadow: 0 0 10px rgb(72, 255, 0),0 0 10px rgb(255, 174, 0),0 0 15px rgb(255, 115, 0);
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid rgb(0, 0, 0) ;
+        animation: animate 4s linear infinite;
+    filter: drop-shadow(0 0 10px rgb(255, 211, 153));
+    }
+    @keyframes animate{
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width: 22%;
+        }
+    }
+/* MAIN BANNER */
+    .title{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;}  
+.title h1{
+    color:rgb(37, 35, 35);
+    font-size: 8em; 
+    text-shadow: 20PX 10PX 20px rgb(255, 166, 0);
+
+    z-index: 2;
+}
+.title::before{
+    content: '';
+    position: absolute;
+    width: 190px;
+    height: 400%;
+
+    background: linear-gradient(#15ff00, #ff7b00);
+    animation: rotate 4s linear infinite;
+}
+
+.title::after{
+    content: '';
+    position: absolute;
+    background: url(home4.jpg);
+    inset: 10px;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    }
+/*BANNER OVERLAY*/
+    .image{
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.267);
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        color: beige;
+        z-index: 1;
+    }
+    
+/*Gray boxes*/
+    .gray-boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.mbox {
+  background-color: #ccc;
+  border: 1px solid #888;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 20PX;
+  text-align: center;
+  border-radius: 6PX;
+
+}
+H3,p{
+    background: ;
+    color: rgb(255, 255, 255);
+}
+.btn{
+    text-decoration: none;
+    background: none;
+    display: inline-block;
+    padding: .3rem 2rem;
+    border: .15rem solid red;
+    color: red;
+    cursor: pointer;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0; height: 100%;
+    background: red;
+     transition: .3s linear;
+    z-index: -1;
+}
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+.btn:hover{
+    color: rgb(247, 245, 245);
+}
+i{
+    background: none;
+transform: scale(1.1);
+width: 0;
+height: 45px;
+float: right;
+position: relative;
+top: 7px;
+right: 37px;
+margin-left: 11px;
+cursor: pointer;
+}
+.mbox:hover i{
+   
+   text-shadow:0 0 6px #f07400;
+   
+}
+
+.mbox img {
+  max-width: 300PX;
+  height: auto;
+  border-radius: 6PX;
+}
+
+.mbox h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.mbox p {  
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: crimson;
+  
+}
+#ise{
+    cursor: pointer;
+    top: 6px;
+right: 150px;
+}
+.feat-boxes {
+  display: flex;
+  justify-content:space-around ;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+}
+.Fbox {
+  background-color: #000000;
+  
+  padding: 5px;
+  margin: 1px;
+  margin-top: 20PX;
+  text-align: center;
+  border-radius: 6PX;
+  align-items: center;
+
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+font-size: 2rem;
+color: #f07400;
+}
+.link{
+display: flex;
+
+}
+ .link  a:hover i{
+    color: #f07400;
+}
+
+        </style>
+    </head><body>
+    <BR>
+        <i class="fa-solid fa-magnifying-glass" id="ise" style="color: #f07400;">
+        </i>
+        <i class="fa-solid fa-heart" id="ih" style="color: #f07400;"></i>
+        <i class="fa-solid fa-cart-shopping fa-shake"  id="is" style="color: #f07400;"></i>
+       <div class="main"> <H1 data-text="~~ BITE FUSION ~~">~~ BITE FUSION ~~</H1> 
+        </div><HR color="sienna" width="100%">
+
+        <nav>   <!---NAVIGATION  BAR-->
+    <ul>
+        <li><a href="h.html">HOME</a>
+        </li>
+        <li><a href="#">MENU</a>
+        <ul class="dropdown">
+            <li><a href="b.html">Burgers</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+            <li><a href="ice.html">Ice-Cream's</a></li>
+            
+        </ul></li>
+        <LI><a href="about.html">ABOUT</a></LI>
+        <LI><a href="coupon.html">COUPONS</a></LI>
+        <LI><a href="order.html">LOGIN</a></LI>
+    </ul></div>
+    </nav>
+    <hr color="sienna">
+    
+    <!---MAIN BANNER-->
+    <div class="title">
+        <div class="overlay"></div>
+            
+        <h1>ARE YOU HUNGRY?</h1>
+        
+       </div>
+       </div>
+
+    
+
+<!---SPECIALITY SECTION--><br>
+
+<h1 align="center"  >OUR SPECIALITY</h1>
+<div class="container">
+<div class="box" id="box1">
+    <div class="hid">
+        <h1>BURGERS</h1>
+        <p>Get ready to sink your teeth into the world
+             of mouthwatering burgers! Burgers are the epitome of comfort food, combining juicy patties, melty cheese, and an array of 
+             delicious toppings. </p>
+    </div>
+</div>
+<div class="box" id="box2">
+    <div class="hid">
+        <h1>PIZZA</h1>
+        <p>Whether you call it plain ol' pizza, a slice, a pie, a triangle of joy, 
+            cheesy goodness, or just heaven – I've got ya covered. </p>
+    </div>
+</div>
+<div class="box" id="box3">
+    <div class="hid">
+        <h1>ICE-CREAMS</h1>
+        <p>No slice of pie is complete without
+             a scoop of ice cream on top! </p>
+    </div>
+</div>
+</div>
+<br><br><br>
+
+<!---ICONS SECTION-->
+<h1 align="center" style="color: yellow;"   >You know the saying, ‘nothing good comes easy’? It’s a lie.</h1>
+<BR>
+    <div class="feat-boxes ">
+<Div class="Fbox">
+<img src="oi.jpg" alt="Product 3" width="200px" he>
+     
+      <h3 style="color: yellow;"   >Order like a BOSS</h3><br><hr ><br>
+      <p  >Just use our site or download our app. <BR>Don’t 
+        bother about a road to goodness,<br> when you can get it on tap.</p>
+     
+    </div>
+<Div class="Fbox">
+<img src="si.jpg" alt="Product 3" width="140px" he>
+     
+      <h3 style="color: yellow;">DON'T BE PATIENT!!</h3><br><hr ><br>
+      <p  >Because in less than an hour, your<br> command will be fulfilled, and you’ll be devouring <br>the delicious goodness our chefs have sent you.</p>
+    
+    </div>
+    <Div class="Fbox">
+        <img src="di.png" alt="Product 3" width="250px" he>
+             
+             <h3 style="color: yellow;">Goodness isn't choosy about location</h3><br>
+              <hr  ><br>
+              <p > We’ll deliver to you wherever you are.<br> We have even delivered to a customer who was<br> in the park and decided on an impromptu picnic. True story. Try it.</p>
+              
+            </div></div>
+
+<!---POPULAR SECTION-->
+<br><br>
+<h1 align="center" >POPULAR ITEMS</h1>
+
+    <div class="gray-boxes">
+      <!-- Box 1 -->
+      <div class="mbox">
+        <img src="P1.AVIF" alt="Product 1">
+        <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+        <h3>Mexican Green Wave</h3>
+        <p>Rs 215</p>
+        <a href="#" class="btn">ORDER NOW</a>
+      </div>
+  
+      <!-- Box 2 -->
+      <div class="mbox">
+        <img src="P2.avif" alt="Product 2" >
+        <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+        <h3>Chicken Golden Delight</h3>
+        <p>RS 450</p>
+        <a href="#" class="btn">ORDER NOW</a>
+      </div>
+  
+      <!-- Box 3 -->
+      <div class="mbox">
+        <img src="P3.avif" alt="Product 3" >
+        <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+        <h3>Pepperoni Fiesta</h3>
+        <p>Rs 235</p>
+        <a href="#" class="btn">ORDER NOW</a>
+      </div>
+  
+      <!-- Box 4 -->
+      <div class="mbox">
+        <img src="P4.avif" alt="Product 4">
+        <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+        <h3>Pepper Barbecue Chicken</h3>
+        <p>Rs 335</p>
+        <a href="#" class="btn">ORDER NOW</a>
+      </div>
+      <!-- Box 5 -->
+      <div class="mbox">
+          <img src="P5.avif" alt="Product 3" >
+          <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+          <h3>Pepper Barbecue Chicken</h3>
+          <p>Rs 335</p>
+          <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        <!-- Box 6 -->
+      <div class="mbox">
+          <img src="P6.avif" alt="Product 3" width="600px">
+          <i class="fa-solid fa-heart"  style="color: #f07400;"></i>
+          <h3>Veg Extravaganza</h3>
+          <p>Rs 450</p>
+          <a href="#" class="btn">ORDER NOW</a>
+        </div>
+        </div>
+        <!---FOOTER -->
+
+ <hr>
+ <br><br>
+ <footer>
+    <div class="footer-content">
+        <h3>Bite Fusion</h3>
+        
+    <div class="link">
+        <ul>
+            <li>
+<a><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a><i class="fa-brands fa-instagram"></i></a>
+                                            </li>
+            </ul>
+        </div>
+        Contact us: +123-456-789 , +111-222-333
+<br><br>
+    </div>
+    
+</footer>
+ 
+
+ <center>
+ <font style="color: #f07400;">
+COPYRIGHT &COPY; 2023; Bite Fusion</font>
+ </center>
+    </body>
+    </html> 

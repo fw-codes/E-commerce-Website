@@ -1,0 +1,356 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+                * { padding: 0;
+            margin: 0;
+            background: black;
+            color: white;
+    }
+    ul {
+        list-style: none;
+        background: black;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+
+    }
+    ul li a{
+        display: block;
+        padding: 20px 25px;
+        color:rgb(255, 166, 0);
+        text-decoration: none;
+        padding: 10px 95px;
+        text-align: center;
+        font-size: 20px;
+    }
+   
+    ul li ul.dropdown li{
+        display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;   
+        background:  rgb(0, 0, 0);
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: rgba(59, 60, 61, 0.747);
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }   
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+   /* ALL BOXES */
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    
+    .box{ 
+        float:left;
+        margin: 12px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+    }
+    
+    #box1 { background: url('bh.jpg');
+background-size: contain;}
+#box2 { background: url('ph.jpg');
+background-size: contain;}
+#box3 { background: url('ih.jpg'), no-repeat;
+background-size: contain;}
+#box4 { 
+    background: url('ih.jpg') no-repeat;
+background-size: contain;
+}
+ 
+/* BOX HID*/
+    .hid{ 
+        top: 100%;
+        position: relative;
+        transition: all .3s ease-out;
+        height: 100%;
+        width: 100%;
+        background: rgba(128, 128, 128, 0.637);
+        padding: 7px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .box:hover > .hid{
+        top: 0;
+    }
+     h1,p{
+        margin: 0;
+        background: none;
+        color: white;
+        
+     }
+
+
+
+     .p-box {
+            width: 300px; 
+            background-color: #f0f0f0; /* Grey background color */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Center align content */
+            border: 1px solid #ccc; 
+        }
+
+        /* Styling for the image */
+        .p-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Styling for the name */
+        .p-name {
+            font-weight: bold;
+            margin-top: 10px; 
+        }
+
+        /* Styling for the price */
+        .p-price {
+            color: #007bff; /* Blue color for the price */
+        }
+    /* ICONS*/
+ i{
+    background: none;
+transform: scale(1.1);
+width: 0;
+height: 45px;
+float: right;
+position: relative;
+
+margin-left: 1px;
+cursor: pointer;
+}
+#ih{
+    top: 6px;
+right: 100px;
+}
+#is{
+    top: 6px;
+right: 50px;
+}
+/* TITLE */
+ .main h1{
+        position: relative;
+        color: rgb(49, 48, 48);
+    }
+     .main h1::before{
+        content: attr(data-text);
+        position: absolute;
+        color: white;
+        text-shadow: 0 0 10px rgb(72, 255, 0),0 0 10px rgb(255, 174, 0),0 0 15px rgb(255, 115, 0);
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid rgb(0, 0, 0) ;
+        animation: animate 4s linear infinite;
+    filter: drop-shadow(0 0 10px rgb(255, 211, 153));
+    }
+    @keyframes animate{
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width: 22%;
+        }
+    }
+/* MAIN BANNER */
+    .title{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;}  
+.title h1{
+    color:rgb(37, 35, 35);
+    font-size: 8em; 
+    text-shadow: 0 0 10px black;
+
+    z-index: 2;
+}
+.title::before{
+    content: '';
+    position: absolute;
+    width: 190px;
+    height: 400%;
+
+    background: linear-gradient(#15ff00, #ff7b00);
+    animation: rotate 4s linear infinite;
+}
+
+.title::after{
+    content: '';
+    position: absolute;
+    background: url(home4.jpg);
+    inset: 10px;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    }
+/*BANNER OVERLAY*/
+    .image{
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.178);
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        color: beige;
+        z-index: 1;
+    }
+
+
+  .features{  
+   
+    text-align: center;
+    color: #4a4a4a;
+    margin: 20px 0 43px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    font-family: ProximaNova-Bold;
+}
+    
+.Fbox {
+  background-color: #ccc;
+  border: 1px solid #888;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 20PX;
+  text-align: center;
+  border-radius: 12PX;
+
+}
+.button__text,
+    .button__icon {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 24px;
+        color: #fff;
+        height: 100%;
+    }
+    
+    .button__icon {
+        font-size: 1.5em;
+        background: rgba(0, 0, 0, 0.08);
+    }
+.button {
+        display: inline-flex;
+        height: 50px;
+        padding: 0;
+        background: #009578;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: "Quicksand", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 8px 10px 0 black;
+    }
+
+
+    #ise{
+    top: 6px;
+right: 150px;
+}
+        </style>
+    </head>
+    <BR><i class="fa-solid fa-magnifying-glass" id="ise" style="color: #f07400;"></i>
+        
+        <i class="fa-solid fa-heart" id="ih" style="color: #f07400;"></i>
+        <i class="fa-solid fa-cart-shopping fa-shake"  id="is" style="color: #f07400;"></i>
+       <div class="main"> <H1 data-text="~~ BITE FUSION ~~">~~ BITE FUSION ~~</H1> 
+        </div><HR color="sienna" width="100%">
+
+        <nav>   <!---NAVIGATION  BAR-->
+    <ul>
+        <li><a href="h.html">HOME</a>
+        </li>
+        <li><a href="#">MENU</a>
+        <ul class="dropdown">
+            <li><a href="b.html">Burgers</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+            <li><a href="ice.html">Ice-Cream's</a></li>
+            <li><a href="#">American</a></li>
+            <li><a href="#">Italian</a></li>
+        </ul></li>
+        <LI><a href="#">ABOUT</a></LI>
+        <LI><a href="#">ORDER</a></LI>
+        <LI><a href="#">CONTACT US</a></LI>
+    </ul></div>
+    </nav>
+    <hr color="sienna">
+    
+    <!---MAIN BANNER-->
+    <div class="title">
+        <div class="overlay"></div>
+            <img src="
+            +jpg" >
+        <h1>BITE FUSION</h1>
+       </div>
+       </div>
+
+    
+
+<!---SPECIALITY SECTION--><br>
+
+<h1 align="center"  >OUR SPECIALITY</h1>
+<div class="features">
+    <img src="P2.avif" width="400">
+    <h2>Order like a boss</h2>
+    <hr align="center" width="6%" color="yellow">
+    <p>Just use our site or download our app. Don’t bother 
+        about a road to goodness, when you can get it on tap.</p>
+</div>
+<div class="Fbox">
+<div class="features">
+    <img src="P2.avif" width="400">
+    <h2 align="center">Order like a boss</h2>
+    <hr align="center"  width="6%" color="yellow">
+    <p>Just use our site or download our app. Don’t bother 
+        about a road to goodness, when you can get it on tap.</p>
+</div></div>
+    </body>
+    </html> 

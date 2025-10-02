@@ -1,0 +1,249 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    * { padding: 0;
+            margin: 0;
+           
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+    ul {
+        list-style: none;
+        background: black;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+
+    }
+    ul li a{
+        display: block;
+        padding: 20px 25px;
+        color:rgb(255, 166, 0);
+        text-decoration: none;
+        padding: 10px 95px;
+        text-align: center;
+        font-size: 20px;
+    }
+   
+    ul li ul.dropdown li{
+        display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;   
+        background:  rgb(0, 0, 0);
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: rgba(59, 60, 61, 0.747);
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }   
+    #ih{
+    top: 6px;
+right: 100px;
+z-index: 1;
+}
+#is{
+    top: 6px;
+right: 50px;
+height: 1px; z-index: 1;}
+/* TITLE*/
+.main h1{
+        position: relative;
+        color: rgb(49, 48, 48);
+    }
+     .main h1::before{
+        content: attr(data-text);
+        position: absolute;
+        color: white;
+        text-shadow: 0 0 10px rgb(72, 255, 0),0 0 10px rgb(255, 174, 0),0 0 15px rgb(255, 115, 0);
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid rgb(0, 0, 0) ;
+        animation: animate 4s linear infinite;
+    filter: drop-shadow(0 0 10px rgb(255, 211, 153));
+    }
+    @keyframes animate{
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width: 22%;
+        }
+    }
+    #ise{
+    top: 6px;
+right: 150px;
+z-index: 1;}
+i{
+    background: none;
+transform: scale(1.1);
+width: 0;
+height: 45px;
+float: right;
+position: relative;
+top: 7px;
+right: 37px;
+margin-left: 11px;
+cursor: pointer;
+}
+
+    
+
+
+
+
+
+
+/* Style the banner section */
+.banner {
+    position: relative;
+    text-align: center;
+    
+    padding: 10px ;
+}
+
+.banner img {
+    width: 100%;
+    height: 400PX;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; /* Text color for banner content */
+}
+.banner-content h1{
+    font-size: 4rem;
+    color: white;
+
+}
+.banner-content p{
+    font-size: larger;
+    color: white;
+}
+
+
+.rectangle {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+    color: white;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    background-color: #292929; /* Background color for text side */
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rectangle:nth-child(odd) .text,
+.rectangle:nth-child(even) .image {
+    background-color: #252525; 
+}
+</style>
+</head>
+<body  >
+  <BR><i class="fa-solid fa-magnifying-glass" id="ise" style="color: #f07400;"></i>
+    <i class="fa-solid fa-heart" id="ih" style="color: #f07400;"></i>
+    <i class="fa-solid fa-cart-shopping fa-shake"  id="is" style="color: #f07400;"></i>
+   <div class="main"> <H1 data-text="~~ BITE FUSION ~~">~~ BITE FUSION ~~</H1> 
+    </div><HR color="sienna" width="100%">
+    <nav>   <!---NAVIGATION  BAR-->
+        <ul>
+            <li><a href="h.html">HOME</a>
+            </li>
+            <li><a href="#">MENU</a>
+            <ul class="dropdown">
+                <li><a href="b.html">Burgers</a></li>
+                <li><a href="pizza.html">Pizza</a></li>
+                <li><a href="ice.html">Ice-Cream's</a></li>
+                
+            </ul></li>
+            <LI><a href="about.html">ABOUT</a></LI>
+            <LI><a href="coupon.html">COUPONS</a></LI>
+            <LI><a href="order.html">LOGIN</a></LI>
+        </ul></div>
+        </nav>
+        <hr color="sienna">
+        <section class="banner">
+            <div class="banner-content">
+                <h1>BELIEVE in good</h1>
+                <hr color="yellow" ><br>
+                 <P>   We believe in good.
+                    When we say good, we don’t just mean good food. We also mean the goodness that<BR> good food leads to. Good memories, a good temper, 
+                        a good day, a good burp.<BR> And we know that when our food leaves our kitchens, we’re creating all that.<BR> It’s rewarding, 
+                    this belief in good. Now take a look at how we go about it.</P>
+               
+            </div>
+            <img src="a.jpg" alt="Banner Image">
+        </section>
+        
+            <div class="rectangle">
+                <div class="text">
+                    <h2>No good salad starts with stale lettuce.</h2>
+                       <p> We’re ruthless about goodness. We have no 
+                        qualms about tearing up a day-old lettuce leaf (straight from the farm), or steaming a baby (carrot). Cut. Cut. Chop. Chop. 
+                        Steam. Steam. Stir Stir. While they’re still young and fresh
+                        - that’s our motto. It makes the kitchen a better place.</p>
+                </div>
+                <div class="image">
+                    <img src="a1.jpg" alt="Image 1">
+                </div>
+            </div>
+            <div class="rectangle">
+                <div class="image">
+                    <img src="a2.jpg" alt="Image 2">
+                </div>
+                <div class="text">
+                    <h2>Life is one thing after another. Don’t make it the same thing 
+                        after another.</h2>
+                       <p> Our menu changes daily because we don’t believe 
+                        in boring you (or ourselves). We also like to keep you guessing. Cliff-hangers, that’s what we believe in. But here’s a
+                         spoiler. The menu changes, the goodness doesn’t.</p>
+                </div>
+            </div>
+            <div class="rectangle">
+                <div class="text">
+                    <h2>Chefs who make the onions weep.</h2>
+                      <p>  They make sauces sing and salads dance. They create magic with skill, knowledge, passion, and stirring spoons (among other things). They make goodness so good, it doesn’t know 
+                        what to do with itself. We do though. We send it to you.</h2>
+                       </p>
+                </div>
+                <div class="image">
+                    <img src="a3.jpg" alt="Image 1">
+                </div>
+            </div>
+      
+    </body>
+    </html>
